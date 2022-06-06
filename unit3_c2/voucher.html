@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+
+  <style>
+      html, body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 62.5%
+    }
+
+    #navbar {
+      max-width: 98%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: aquamarine;
+      font-size: 1.8rem;
+    }
+
+    #wallet_balance {
+      /* border: 1px solid red; */
+      width: 4rem;
+      height: 3rem;
+    }
+
+    #voucher_list {
+      max-width: 94%;
+      margin: auto;
+      margin-top: 5rem;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: repeat(auto);
+      gap: 4rem;
+      /* border: .6rem solid blue; */
+    }
+    .voucher {
+      text-align: center;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .voucher > img {
+      max-width: 90%;
+      margin: auto;
+      object-fit: cover;
+    }
+
+    .voucher > h3 {
+      font-size: 2.4rem;
+      font-weight: 400;
+      margin: 1.2rem 0;
+    }
+
+    .voucher > button {
+      font-size: 2.2rem;
+      margin: auto;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .voucher > p {
+      font-size: 2rem;
+    }
+    .voucher > button {
+      cursor: pointer;
+    }
+  </style>
+  <body>
+     <div id="navbar">
+      <h3>Sign Up</h3>
+      <div id="wallet_balance"></div>
+      <a href="purchase.html">Purchase Voucher</a>
+    </div>
+
+    <div id="voucher_list"></div>
+    <!-- Wallet balence id:- "wallet_balance" (only number). -->
+    <!-- - The voucher card will have class :- "voucher".
+  - All the vouchers will be appended inside div with id "voucher_list".
+  - Buy button will have class:- "buy_voucher"
+  - All the purchased voucher will be stored with key :- "purchase". -->
+  </body>
+</html>
+
+<script src="./scripts/voucher.js"></script>
